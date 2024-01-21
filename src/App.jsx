@@ -6,7 +6,6 @@ import { InputForm } from './components/input'
 import { Grid } from './components/grid'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>

@@ -29,7 +29,7 @@ export const Grid = ({gridDim}) => {
   let matrix = createMatrix(gridDim)
 
   return (
-        <table>
+    <table className='flex justify-center items-center h-fit'>
         <tbody>
         {matrix.map((row, rowIndex) => (
             <tr key={rowIndex}>
@@ -43,3 +43,6 @@ export const Grid = ({gridDim}) => {
 
   )
 }
+
+
+// Add the shuffle button 
