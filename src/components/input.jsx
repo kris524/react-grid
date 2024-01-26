@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Grid } from './grid'
+import { Button } from './shuffle_btn'
 
 export const InputForm = () => {
     const [gridDim, setGridDim] = useState("")
@@ -27,6 +28,7 @@ export const InputForm = () => {
             <button type="submit" className="flex-col bg-blue-500 mb-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"  >Create Grid</button>
         </form>
         {gridDim !== null && <Grid gridDim={gridDim}></Grid>}
+        <Button></Button>
     </div>
   )
 }

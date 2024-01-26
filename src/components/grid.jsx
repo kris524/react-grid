@@ -19,7 +19,6 @@ function createMatrix(size) {
         matrix.push(row)
 
     }
-    // console.log("Matrix is:", matrix)
     return matrix
 
 }
