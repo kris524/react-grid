@@ -1,6 +1,6 @@
-import React from 'react'
-import GridLayout from "react-grid-layout";
+import React, { useEffect, useState } from 'react'
 import { Card } from './card';
+import shuffle2dArray from '../utils/shuffle';
 
 
 function createMatrix(size) {
@@ -25,9 +25,21 @@ function createMatrix(size) {
 
 export const Grid = ({gridDim}) => {
 
-  let matrix = createMatrix(gridDim)
+  const [matrix, setMatrix] = useState(() => createMatrix(gridDim))
+
+  useEffect(() => {
+    setMatrix(createMatrix(gridDim))
+  },[gridDim])
+
+
+  const handleShuffle = () => {
+    setMatrix(shuffle2dArray(matrix))
+  }
 
   return (
+    <>
+    <button onClick={handleShuffle} className="flex-col mt-5 bg-blue-500 mb-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Shuffle</button>
+
     <table className='flex justify-center items-center h-fit'>
         <tbody>
         {matrix.map((row, rowIndex) => (
@@ -39,9 +51,7 @@ export const Grid = ({gridDim}) => {
         ))}
         </tbody>
     </table>
+    </>
 
   )
 }
-
-
-// Add the shuffle button 
