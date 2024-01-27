@@ -1,3 +1,8 @@
+# React Interview Challenge
+
+My attempt at doing this challenge: https://github.com/lucas-barake/interactive-boxes-interview-challenge
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
