@@ -36,10 +36,14 @@ export const Grid = ({gridDim}) => {
     setMatrix(shuffle2dArray(matrix))
   }
 
+  const handleReset = () => {
+    setMatrix(createMatrix(gridDim))
+  }
+
   return (
     <>
     <button onClick={handleShuffle} className="flex-col mt-5 bg-blue-500 mb-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Shuffle</button>
-
+    <button onClick={handleReset} className="flex-col mt-5 bg-blue-500 mb-4 ml-4 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Reset</button>
     <table className='flex justify-center items-center h-fit'>
         <tbody>
         {matrix.map((row, rowIndex) => (
